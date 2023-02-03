@@ -41,3 +41,12 @@ arrayAnimales.forEach((animal)=>{
 lista.appendChild(fragment);
 //de esta manera se evita el "reflow"
 
+//este metodo tampoco posee reflow porque itero todo y lo asigno a un String
+let template = "";
+const arrayNombres = ["juan","pedro","roberto"];
+
+arrayNombres.forEach((nombre)=>{
+    template += `<li>${nombre}</li>`
+});
+
+lista.innerHTML += template;
